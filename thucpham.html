@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực phẩm Tết - Tết An Khang</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <audio id="nhacTet" loop>
+    <source src="tet.mp3" type="audio/mpeg">
+</audio>
+
+<button onclick="document.getElementById('nhacTet').play()"
+style="position:fixed; bottom:20px; right:20px;
+background:#ffcc33; color:#8b0000; padding:15px;
+border:none; border-radius:50px; cursor:pointer;
+font-weight:bold; z-index:9999;">
+    🎵 Bật nhạc Tết
+</button>
+<div class="top-bar">🥮 Hương vị truyền thống - Tết thêm trọn vẹn 🥮</div>
+<header>
+    <!-- CHỮ TẾT CHẠY NGANG -->
+<div class="tet-chay">
+    <div class="tet-noidung">
+        🌸 XUÂN AN KHANG THỊNH VƯỢNG 🌸
+        🎊 CHÚC MỪNG NĂM MỚI 🎊
+        🧧 XUÂN AN KHANG THỊNH VƯỢNG 🧧
+        🎉 CHÚC MỪNG NĂM MỚI 🎉
+    </div>
+</div>
+    <div class="header-main">
+        <a href="index.html" class="logo">🌸 TẾT AN KHANG<span>CHÀO XUÂN ĐÓN LỘC</span></a>
+        <div class="search-box">
+            <input id="searchInput" placeholder="Tìm kiếm sản phẩm...">
+            <button onclick="searchProduct()">🔍</button>
+        </div>
+        <a href="giohang.html" class="cart-link">🛒 Giỏ hàng (<span class="cart-count">0</span>)</a>
+    </div>
+    <nav>
+        <a href="index.html">Trang chủ</a>
+        <a href="banhmut.html">Bánh mứt Tết</a>
+        <a href="gioqua.html">Giỏ quà Tết</a>
+        <a href="trangtri.html">Đồ trang trí</a>
+        <a href="thucpham.html" class="active">Thực phẩm Tết</a>
+        <a href="lienhe.html">Liên hệ</a>
+    </nav>
+</header>
+
+<section class="page-banner">
+    <h1>🥮 THỰC PHẨM TẾT</h1>
+    <p>Đậm đà hương vị truyền thống trong từng bữa cơm ngày xuân</p>
+</section>
+
+<section class="category-hero hero-thucpham">
+    <div class="category-hero-content">
+        <span class="hero-label">🍊 CHỢ TẾT AN KHANG 🍊</span>
+        <h1>THỰC PHẨM TẾT - TƯƠI NGON TRỌN VỊ</h1>
+        <p>Lựa chọn thực phẩm chất lượng, chuẩn bị mâm cơm Tết đủ đầy.</p>
+
+        <div class="hero-benefits">
+            <span>🎁 Giảm đến 15%</span>
+            <span>🥬 Tươi ngon mỗi ngày</span>
+            <span>🚚 Giao hàng tận nơi</span>
+        </div>
+
+        <a href="#sanpham" class="hero-button">MUA SẮM NGAY →</a>
+    </div>
+    <div class="hero-decoration">🍊</div>
+</section>
+
+<section class="container">
+    <h2 class="section-title">MÓN NGON NGÀY TẾT</h2>
+    <p class="section-desc">Chuẩn bị những món ăn hấp dẫn cho gia đình</p>
+
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="tpt16.png">
+            <div class="product-info">
+                <h3> Combo mâm thực phẩm ngày Tết</h3>
+                <p>Thực phẩm đa dạng cho những bữa ăn sum họp.</p>
+                <div class="price">2.650.000đ</div>
+                <button class="add-cart" onclick="addToCart('Mâm thực phẩm ngày Tết',2.650000,'')">Thêm vào giỏ</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="tpt17.png">
+            <div class="product-info">
+                <h3> Combo món ăn truyền thống</h3>
+                <p>Món ngon phù hợp cho những ngày đầu năm.</p>
+                <div class="price">1.800.000đ</div>
+                <button class="add-cart" onclick="addToCart('Món ăn truyền thống',1800000,'')">Thêm vào giỏ</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="tpt18.png">
+            <div class="product-info">
+                <h3>Combo đặc sản ngày xuân</h3>
+                <p>Đặc sản hấp dẫn dành cho gia đình và khách đến chơi.</p>
+                <div class="price">1.500.000đ</div>
+                <button class="add-cart" onclick="addToCart('Đặc sản ngày xuân',1500000,'')">Thêm vào giỏ</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="tpt19.png">
+            <div class="product-info">
+                <h3>Combo món ngon Tết</h3>
+                <p>Combo thực phẩm tiện lợi cho gia đình ngày Tết.</p>
+                <div class="price">1.020.000đ</div>
+                <button class="add-cart" onclick="addToCart('Combo món ngon Tết',1020000,'')">Thêm vào giỏ</button>
+            </div>
+        </div>
+         <div class="product-card">
+            <img src="tpt1.png">
+            <div class="product-info">
+                <h3>Thịt kho trứng</h3>
+                <p>Món ăn trong các gia đình Việt Nam.</p>
+                <div class="price">50.000đ</div>
+                <button class="add-cart" onclick="addToCart('Thịt kho trứng',50000,'')">Thêm vào giỏ</button>
+            </div>
+        </div>
+         <div class="product-card">
+            <img src="tpt2.png">
+            <div class="product-info">
+                <h3>Canh khổ qua tốt cho sức khoẻ.</h3>
+                <p>Thực phẩm đa dạng cho những bữa ăn sum họp.</p>
+                <div class="price">60.000đ</div>
+                <button class="add-cart" onclick="addToCart('Canh khổ qua',60000,'')">Thêm vào giỏ</button>
+            </div>
+        </div>
+         <div class="product-card">
+            <img src="tpt3.png">
+            <div class="product-info">
+                <h3>Gà luộc</h3>
+                <p>Gà luộc thơm ngon có trong các ngày lễ Việt Nam.</p>
+                <div class="price">160.000đ</div>
+                <button class="add-cart" onclick="addToCart('Gà luộc',160000,'')">Thêm vào giỏ</button>
+            </div>
+        </div>
+         <div class="product-card">
+            <img src="tpt4.png">
+            <div class="product-info">
+                <h3>Nem rán</h3>
+                <p>Món ăn không thể thiếu trong ngày Tết.</p>
+                <div class="price">100.000đ</div>
+                <button class="add-cart" onclick="addToCart('Nem rán',100000,'')">Thêm vào giỏ</button>
+            </div>
+        </div>
+         <div class="product-card">
+            <img src="tpt5.png">
+            <div class="product-info">
+                <h3>Bánh Tét</h3>
+                <p>Món ăn truyền thống Việt Nam.</p>
+                <div class="price">100.000đ</div>
+                <button class="add-cart" onclick="addToCart('Bánh Tét',100000,'')">Thêm vào giỏ</button>
+            </div>
+        </div>
+         <div class="product-card">
+            <img src="tpt13.png">
+            <div class="product-info">
+                <h3>Thịt đông</h3>
+                <p>Món ăn truyền thống ngày Tết.</p>
+                <div class="price">60.000đ</div>
+                <button class="add-cart" onclick="addToCart('Thịt đông',60000,'')">Thêm vào giỏ</button>
+            </div>
+        </div>
+         <div class="product-card">
+            <img src="tpt15.png">
+            <div class="product-info">
+                <h3>Xôi</h3>
+                <p>Món ăn truyền thống Việt nam.</p>
+                <div class="price">60.000đ</div>
+                <button class="add-cart" onclick="addToCart('Xôi',60000,'')">Thêm vào giỏ</button>
+            </div>
+        </div>
+         <div class="product-card">
+            <img src="tpt14.png">
+            <div class="product-info">
+                <h3>Cá khó</h3>
+                <p>Món ăn khó quên từ biển cả.</p>
+                <div class="price">90.000đ</div>
+                <button class="add-cart" onclick="addToCart('Cá kho',90000,'')">Thêm vào giỏ</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <div><h3>TẾT AN KHANG</h3><p>Mua sắm Tết trọn niềm vui.</p></div>
+        <div><h3>Danh mục</h3><p>Bánh mứt - Giỏ quà - Trang trí - Thực phẩm</p></div>
+        <div><h3>Liên hệ</h3><p>Nghệ An, Việt Nam</p><p>0987 654 321</p></div>
+    </div>
+    <div class="copyright">© 2026 Tết An Khang</div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

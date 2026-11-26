@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bánh mứt Tết - Tết An Khang</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    
+</style>
+</head>
+<body>
+        <audio id="nhacTet" loop>
+    <source src="tet.mp3" type="audio/mpeg">
+</audio>
+
+<button onclick="document.getElementById('nhacTet').play()"
+style="position:fixed; bottom:20px; right:20px;
+background:#ffcc33; color:#8b0000; padding:15px;
+border:none; border-radius:50px; cursor:pointer;
+font-weight:bold; z-index:9999;">
+    🎵 Bật nhạc Tết
+</button>
+<div class="top-bar">🍬 Bánh mứt thơm ngon - Đón Tết sum vầy 🍬</div>
+<header>
+    <!-- CHỮ TẾT CHẠY NGANG -->
+<div class="tet-chay">
+    <div class="tet-noidung">
+        🌸 XUÂN AN KHANG THỊNH VƯỢNG 🌸
+        🎊 CHÚC MỪNG NĂM MỚI 🎊
+        🧧 XUÂN AN KHANG THỊNH VƯỢNG 🧧
+        🎉 CHÚC MỪNG NĂM MỚI 🎉
+    </div>
+</div>
+    <div class="header-main">
+        <a href="index.html" class="logo">🌸 TẾT AN KHANG<span>CHÀO XUÂN ĐÓN LỘC</span></a>
+        <div class="search-box">
+            <input id="searchInput" placeholder="Tìm kiếm sản phẩm...">
+            <button onclick="searchProduct()">🔍</button>
+        </div>
+        <a href="giohang.html" class="cart-link">🛒 Giỏ hàng (<span class="cart-count">0</span>)</a>
+    </div>
+    <nav>
+        <a href="index.html">Trang chủ</a>
+        <a href="banhmut.html" class="active">Bánh mứt Tết</a>
+        <a href="gioqua.html">Giỏ quà Tết</a>
+        <a href="trangtri.html">Đồ trang trí</a>
+        <a href="thucpham.html">Thực phẩm Tết</a>
+        <a href="lienhe.html">Liên hệ</a>
+    </nav>
+</header>
+
+<section class="page-banner">
+    <h1>🍬 BÁNH MỨT TẾT</h1>
+    <p>Hương vị truyền thống - Ngọt ngào ngày xuân</p>
+</section>
+
+<section class="category-hero hero-banhmut">
+    <div class="category-hero-content">
+        <span class="hero-label">🌸 ƯU ĐÃI ĐÓN XUÂN 🌸</span>
+        <h1>BÁNH MỨT TẾT - NGỌT NGÀO HƯƠNG XUÂN</h1>
+        <p>Thưởng thức hương vị truyền thống, đón Tết sum vầy bên gia đình!</p>
+
+        <div class="hero-benefits">
+            <span>🎁 Giảm đến 20%</span>
+            <span>🚚 Giao hàng tận nhà</span>
+            <span>❤️ Chất lượng đảm bảo</span>
+        </div>
+
+        <a href="#sanpham" class="hero-button">SĂN ƯU ĐÃI NGAY →</a>
+    </div>
+    <div class="hero-decoration">🍬</div>
+</section>
+
+<section class="container">
+    <h2 class="section-title">BỘ SƯU TẬP BÁNH MỨT</h2>
+    <p class="section-desc">Những món bánh mứt không thể thiếu trong khay bánh ngày Tết</p>
+
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="bm1.png">
+            <div class="product-info">
+                <h3>Bánh quy bơ</h3>
+                <p>Bánh quy giòn thơm, phù hợp thưởng thức cùng trà.</p>
+                <div class="price">120.000đ</div>
+                <button class="add-cart" onclick="addToCart('Bánh quy bơ',120000,'')">Thêm vào giỏ</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="bm2.png">
+            <div class="product-info">
+                <h3>Bánh ngọt ngày xuân</h3>
+                <p>Hương vị thơm ngon, thích hợp tiếp khách.</p>
+                <div class="price">95.000đ</div>
+                <button class="add-cart" onclick="addToCart('Bánh ngọt ngày xuân',95000,'')">Thêm vào giỏ</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="bm3.png">
+            <div class="product-info">
+                <h3>Kẹo trái cây</h3>
+                <p>Kẹo nhiều hương vị, màu sắc hấp dẫn.</p>
+                <div class="price">75.000đ</div>
+                <button class="add-cart" onclick="addToCart('Kẹo trái cây',75000,'')">Thêm vào giỏ</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="bm4.png">
+            <div class="product-info">
+                <h3>Hộp bánh tổng hợp</h3>
+                <p>Bộ bánh đa dạng dành cho gia đình.</p>
+                <div class="price">160.000đ</div>
+                <button class="add-cart" onclick="addToCart('Hộp bánh tổng hợp',160000,'')">Thêm vào giỏ</button>
+            </div>
+        </div>
+      <div class="product-card">
+            <img src="bm5.png">
+            <div class="product-info">
+                <h3>Mứt Dừa</h3>
+                <p>Mứt dừa thơm ngon cho bạn bè gần xa cùng thưởng thức.</p>
+                <div class="price">20.000đ</div>
+                <button class="add-cart" onclick="addToCart('Mứt Dừa',20.000,'')">Thêm vào giỏ</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="bm6.png">
+            <div class="product-info">
+                <h3>Mứt Dâu</h3>
+                <p>Ngọt ngào như mứt Dâu ngày Tết.</p>
+                <div class="price">60.000đ</div>
+                <button class="add-cart" onclick="addToCart('Mứt Dâu',60.000,'')">Thêm vào giỏ</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="bm7.png">
+            <div class="product-info">
+                <h3>Mứt Gừng</h3>
+                <p>Thơm ngon kích thích vị giác.</p>
+                <div class="price">55.000đ</div>
+                <button class="add-cart" onclick="addToCart('Mứt Gừng',55.000,'')">Thêm vào giỏ</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="bm8.png">
+            <div class="product-info">
+                <h3>Mứt Cà rốt</h3>
+                <p> Màu đỏ cam bắt mắt, giòn ngọt, mang ý nghĩa tài lộc và may mắn.</p>
+                <div class="price">65.000đ</div>
+                <button class="add-cart" onclick="addToCart('Mứt Cà rốt',65.000,'')">Thêm vào giỏ</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="bm9.png">
+            <div class="product-info">
+                <h3>Mứt Bí đao</h3>
+                <p> Có màu trắng trong, vị ngọt thanh,có tác dụng mát gan, thanh nhiệt và biểu trưng cho sự hưng thịnh.</p>
+                <div class="price">100.000đ</div>
+                <button class="add-cart" onclick="addToCart('Mứt Bí đao',100000,'')">Thêm vào giỏ</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="bm10.png">
+            <div class="product-info">
+                <h3>Mứt vỏ Bưởi</h3>
+                <p> Có mùi thơm đặc trưng, vị the nhẹ, hỗ trợ tiêu hóa và giảm mỡ máu rất tốt.</p>
+                <div class="price">40.000đ</div>
+                <button class="add-cart" onclick="addToCart('Mứt vỏ Bưởi',40.000,'')">Thêm vào giỏ</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="bm11.png">
+            <div class="product-info">
+                <h3>Mứt Xoài</h3>
+                <p>Mang vị chua ngọt nhiệt đới, dẻo thơm và giúp giải ngấy hiệu quả trong những ngày Tết.</p>
+                <div class="price">120.000đ</div>
+                <button class="add-cart" onclick="addToCart('Mứt Xoài',120.000,'')">Thêm vào giỏ</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="bm12.png">
+            <div class="product-info">
+                <h3>Mứt Hồng</h3>
+                <p> Thường là dạng sấy dẻo nhập hoặc đặc sản Đà Lạt, vị ngọt đậm đà và giàu dưỡng chất.</p>
+                <div class="price">150.000đ</div>
+                <button class="add-cart" onclick="addToCart('Mứt Hồng',150.000,'')">Thêm vào giỏ</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="bm13.png">
+            <div class="product-info">
+                <h3>Kẹo Lạc</h3>
+                <p>Lớp vỏ giòn bùi kết hợp với nhân đậu phộng rang thơm và vị ngọt đậm của mạch nha.</p>
+                <div class="price">102.000đ</div>
+                <button class="add-cart" onclick="addToCart('Kẹo Lạc',102.000,'')">Thêm vào giỏ</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="bm14.png">
+            <div class="product-info">
+                <h3>Mè Xửng</h3>
+                <p>Đặc sản Huế với hương vị thơm lừng, mềm và dai.</p>
+                <div class="price">80.000đ</div>
+                <button class="add-cart" onclick="addToCart('Mè Xửng',80.000,'')">Thêm vào giỏ</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="bm15.png">
+            <div class="product-info">
+                <h3>Chè Lam</h3>
+                <p>Dẻo thơm, bùi béo từ lạc, cay the của gừng và vị ngọt dịu của mật mía.</p>
+                <div class="price">100.000đ</div>
+                <button class="add-cart" onclick="addToCart('Chè Lam',100.000,'')">Thêm vào giỏ</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="bm16.png">
+            <div class="product-info">
+                <h3>Kẹo Bắp</h3>
+                <p>Có hình trái bắp đặc trưng, kết cấu dẻo dai với hương thơm và vị ngọt của bắp..</p>
+                <div class="price">90.000đ</div>
+                <button class="add-cart" onclick="addToCart('Bánh quy bơ',90.000,'')">Thêm vào giỏ</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <div><h3>TẾT AN KHANG</h3><p>Mua sắm Tết trọn niềm vui.</p></div>
+        <div><h3>Danh mục</h3><p>Bánh mứt - Giỏ quà - Trang trí - Thực phẩm</p></div>
+        <div><h3>Liên hệ</h3><p>Nghệ An, Việt Nam</p><p>0987 654 321</p></div>
+    </div>
+    <div class="copyright">© 2026 Tết An Khang</div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

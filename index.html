@@ -1,0 +1,356 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tết An Khang - Trang chủ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="fireworks"></canvas>
+    <audio id="nhacTet" loop>
+    <source src="tet.mp3" type="audio/mpeg">
+</audio>
+
+<button onclick="document.getElementById('nhacTet').play()"
+style="position:fixed; bottom:20px; right:20px;
+background:#ffcc33; color:#8b0000; padding:15px;
+border:none; border-radius:50px; cursor:pointer;
+font-weight:bold; z-index:9999;">
+    🎵 Bật nhạc Tết
+</button>
+
+<div class="top-bar">🎊 Chào Xuân mới - Mua sắm Tết vui vẻ, nhận nhiều ưu đãi! 🎊</div>
+
+<header>
+    <div class="tet-chay">
+    <div class="tet-noidung">
+        🌸 XUÂN AN KHANG THỊNH VƯỢNG 🌸
+        🎊 CHÚC MỪNG NĂM MỚI 🎊
+        🧧 XUÂN AN KHANG THỊNH VƯỢNG 🧧
+        🎉 CHÚC MỪNG NĂM MỚI 🎉
+    </div>
+</div>
+    <div class="header-main">
+        <a href="index.html" class="logo">
+            🌸 TẾT AN KHANG
+            <span>CHÀO XUÂN ĐÓN LỘC</span>
+        </a>
+
+        <div class="search-box">
+            <input id="searchInput" type="text" placeholder="Tìm kiếm sản phẩm...">
+            <button onclick="searchProduct()">🔍</button>
+        </div>
+
+        <a href="giohang.html" class="cart-link">
+            🛒 Giỏ hàng (<span class="cart-count">0</span>)
+        </a>
+    </div>
+
+    <nav>
+        <a href="index.html" class="active">Trang chủ</a>
+        <a href="banhmut.html">Bánh mứt Tết</a>
+        <a href="gioqua.html">Giỏ quà Tết</a>
+        <a href="trangtri.html">Đồ trang trí</a>
+        <a href="thucpham.html">Thực phẩm Tết</a>
+        <a href="lienhe.html">Liên hệ</a>
+        <a href="dangnhap.html">Đăng nhập</a>
+
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Tết Đến - Xuân Về</h1>
+        <p>
+            Chào đón năm mới với những sản phẩm Tết chất lượng.
+            Mang hương vị ngày xuân đến mọi gia đình.
+            Cùng Tết An Khang chuẩn bị một mùa Tết trọn vẹn!
+        </p>
+        <a href="gioqua.html" class="btn">Khám phá quà Tết →</a>
+    </div>
+</section>
+
+<section class="container">
+    
+<!-- KHU VỰC ƯU ĐÃI TẾT -->
+<section class="tet-promo">
+    <div class="promo-content">
+        <span class="promo-tag">🌸 ƯU ĐÃI ĐÓN XUÂN 🌸</span>
+        <h2>ĐÓN TẾT RỘN RÀNG - NGẬP TRÀN ƯU ĐÃI</h2>
+        <p>Hàng ngàn sản phẩm Tết với mức giá cực kỳ hấp dẫn!</p>
+        <div class="promo-benefits">
+            <span>🎁 Giảm đến 30%</span>
+            <span>🚚 Ưu đãi giao hàng</span>
+            <span>💝 Quà tặng hấp dẫn</span>
+        </div>
+        <a href="#flash-sale" class="promo-button">SĂN ƯU ĐÃI NGAY →</a>
+    </div>
+    <div class="promo-decoration">🧧</div>
+</section>
+
+<!-- MÃ GIẢM GIÁ -->
+<section class="coupon-section container">
+    <h2 class="section-title">🎁 MÃ GIẢM GIÁ ĐẶC BIỆT</h2>
+    <p class="section-desc">Nhận ưu đãi dành riêng cho mùa Tết</p>
+
+    <div class="coupon-grid">
+        <div class="coupon-card">
+            <div>
+                <h3>GIẢM 10%</h3>
+                <p>Cho đơn hàng bất kỳ</p>
+            </div>
+            <div class="coupon-code">TET10</div>
+            <button class="coupon-button" data-code="TET10">
+                Sao chép mã
+            </button>
+        </div>
+
+        <div class="coupon-card">
+            <div>
+                <h3>GIẢM 20%</h3>
+                <p>Cho đơn hàng từ 500K</p>
+            </div>
+            <div class="coupon-code">XUAN20</div>
+            <button class="coupon-button" data-code="XUAN20">
+                Sao chép mã
+            </button>
+        </div>
+
+        <div class="coupon-card">
+            <div>
+                <h3>FREESHIP</h3>
+                <p>Ưu đãi phí vận chuyển</p>
+            </div>
+            <div class="coupon-code">SHIP0</div>
+            <button class="coupon-button" data-code="SHIP0">
+                Sao chép mã
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- FLASH SALE -->
+<section class="flash-section" id="flash-sale">
+    <div class="container">
+        <div class="flash-heading">
+            <div>
+                <h2>🔥 FLASH SALE - SĂN DEAL NGÀY TẾT</h2>
+                <p>Ưu đãi hấp dẫn, số lượng có hạn!</p>
+            </div>
+            <div class="countdown">
+                <span>Kết thúc sau:</span>
+                <strong id="countdown">06:00:00</strong>
+            </div>
+        </div>
+
+        <div class="flash-grid">
+            <div class="flash-card">
+                <span class="discount">-20%</span>
+                <img src="muttet.png" alt="Bánh mứt Tết">
+                <h3>Hộp bánh mứt Tết</h3>
+                <p class="old-price">150.000đ</p>
+                <p class="new-price">120.000đ</p>
+                <a href="banhmut.html">Mua ngay</a>
+            </div>
+
+            <div class="flash-card">
+                <span class="discount">-15%</span>
+                <img src="gioqua.png" alt="Giỏ quà Tết">
+                <h3>Giỏ quà Tết cao cấp</h3>
+                <p class="old-price">500.000đ</p>
+                <p class="new-price">425.000đ</p>
+                <a href="gioqua.html">Mua ngay</a>
+            </div>
+
+            <div class="flash-card">
+                <span class="discount">-25%</span>
+                <img src="trangtritet.png" alt="Đồ trang trí Tết">
+                <h3>Bộ trang trí Tết</h3>
+                <p class="old-price">200.000đ</p>
+                <p class="new-price">150.000đ</p>
+                <a href="trangtri.html">Mua ngay</a>
+            </div>
+
+            <div class="flash-card">
+                <span class="discount">-10%</span>
+                <img src="thucpham.png" alt="Thực phẩm Tết">
+                <h3>Thực phẩm ngày Tết</h3>
+                <p class="old-price">100.000đ</p>
+                <p class="new-price">90.000đ</p>
+                <a href="thucpham.html">Mua ngay</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <h2 class="section-title">DANH MỤC SẢN PHẨM</h2>
+    <p class="section-desc">Đầy đủ mặt hàng cho mùa Tết sum vầy</p>
+
+    <div class="category-grid">
+
+        <a href="banhmut.html" class="category-card">
+            <img src="muttet.png">
+            <h3>🍬 Bánh mứt Tết</h3>
+        </a>
+
+        <a href="gioqua.html" class="category-card">
+            <img src="gioqua.png">
+            <h3> Giỏ quà Tết</h3>
+        </a>
+
+        <a href="trangtri.html" class="category-card">
+            <img src="trangtritet.png">
+            <h3> Đồ trang trí</h3>
+        </a>
+
+        <a href="thucpham.html" class="category-card">
+            <img src="thucpham.png">
+            <h3> Thực phẩm Tết</h3>
+        </a>
+
+        <a href="thucpham.html" class="category-card">
+            <img src="traicaytet.png">
+            <h3> Các loại quả Tết</h3>
+        </a>
+
+        <a href="thucpham.html" class="category-card">
+            <img src="nuoc.png">
+            <h3> Thức uống </h3>
+        </a>
+
+        <a href="thucpham.html" class="category-card">
+            <img src="caycanh.png">
+            <h3> Cây cảnh Tết</h3>
+        </a>
+
+        <a href="thucpham.html" class="category-card">
+            <img src="trangphuc.png">
+            <h3> Trang phục Tết</h3>
+        </a>
+      
+    </div>
+</section>
+
+<section class="container">
+    <h2 class="section-title">SẢN PHẨM NỔI BẬT</h2>
+    <p class="section-desc">Những món hàng được yêu thích trong dịp Tết</p>
+
+    <div class="product-grid">
+
+        <div class="product-card">
+            <img src="banhqua.png">
+            <div class="product-info">
+                <h3>Bánh quy hộp quà</h3>
+                <p>Bánh quy thơm ngon, thích hợp đãi khách ngày Tết.</p>
+                <div class="price">120.000đ</div>
+                <button class="add-cart" onclick="addToCart('Bánh quy hộp quà',120000,'')">Thêm vào giỏ</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="hopqua.png">
+            <div class="product-info">
+                <h3>Hộp quà xuân</h3>
+                <p>Hộp quà sang trọng dành tặng người thân và bạn bè.</p>
+                <div class="price">450.000đ</div>
+                <button class="add-cart" onclick="addToCart('Hộp quà xuân',450000,'')">Thêm vào giỏ</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="dotrangtri.png">
+            <div class="product-info">
+                <h3>Đồ trang trí Tết</h3>
+                <p>Trang trí nhà cửa thêm rực rỡ trong ngày đầu năm.</p>
+                <div class="price">85.000đ</div>
+                <button class="add-cart" onclick="addToCart('Đồ trang trí Tết',85000,'')">Thêm vào giỏ</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="banhkeo.png">
+            <div class="product-info">
+                <h3>Mâm bánh kẹo Tết</h3>
+                <p>Những món ăn hấp dẫn cho gia đình ngày xuân.</p>
+                <div class="price">180.000đ</div>
+                <button class="add-cart" onclick="addToCart('Mâm bánh kẹo Tết',180000,'')">Thêm vào giỏ</button>
+            </div>
+        </div>
+
+         <div class="product-card">
+            <img src="aodaitet.png">
+            <div class="product-info">
+                <h3>Áo dài Tết</h3>
+                <p>Tà áo dài đỏ thêm sắc Tết tươi đẹp.</p>
+                <div class="price">100.000đ</div>
+                <button class="add-cart" onclick="addToCart('Áo Tết',100000,'')">Thêm vào giỏ</button>
+            </div>
+        </div>
+
+          <div class="product-card">
+            <img src="banhchung.png">
+            <div class="product-info">
+                <h3>Bánh Chưng Tết</h3>
+                <p>Bánh Chưng là món ăn gắn liền biểu tượng với Tết.</p>
+                <div class="price">80.000đ</div>
+                <button class="add-cart" onclick="addToCart('Bánh Chưng Tết',80000,'')">Thêm vào giỏ</button>
+            </div>
+        </div>
+
+         <div class="product-card">
+            <img src="caydao.png">
+            <div class="product-info">
+                <h3>Cây Đào</h3>
+                <p>Cây cảnh thêm phần trang trí ngày Tết.</p>
+                <div class="price">150.000đ</div>
+                <button class="add-cart" onclick="addToCart('Cây Đào',850.000,'')">Thêm vào giỏ</button>
+            </div>
+        </div>
+
+          <div class="product-card">
+            <img src="den.png">
+            <div class="product-info">
+                <h3>Đèn lồng</h3>
+                <p>Trang trí thêm không gian nhà đẹp đẽ.</p>
+                <div class="price">50.000đ</div>
+                <button class="add-cart" onclick="addToCart('Đèn lồng',50.000,'')">Thêm vào giỏ</button>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+<section class="banner">
+    <h2>🌸 TẾT ĐOÀN VIÊN - XUÂN TRỌN YÊU THƯƠNG 🌸</h2>
+    <p>Trao quà ngày Tết - Gửi trọn yêu thương đến mọi nhà.</p>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <div>
+            <h3>🌸 TẾT AN KHANG</h3>
+            <p>Website mua sắm các sản phẩm Tết dành cho mọi gia đình.</p>
+        </div>
+        <div>
+            <h3>Danh mục</h3>
+            <p>Bánh mứt Tết</p>
+            <p>Giỏ quà Tết</p>
+            <p>Đồ trang trí</p>
+            <p>Thực phẩm Tết</p>
+        </div>
+        <div>
+            <h3>Thông tin liên hệ</h3>
+            <p>📍 Nghệ An, Việt Nam</p>
+            <p>☎ 0987 654 321</p>
+            <p>✉ tetankhang@gmail.com</p>
+        </div>
+    </div>
+    <div class="copyright">© 2026 Tết An Khang. Website bán hàng Tết.</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

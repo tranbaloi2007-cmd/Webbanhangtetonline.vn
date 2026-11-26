@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ quà Tết - Tết An Khang</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <audio id="nhacTet" loop>
+    <source src="tet.mp3" type="audio/mpeg">
+</audio>
+
+<button onclick="document.getElementById('nhacTet').play()"
+style="position:fixed; bottom:20px; right:20px;
+background:#ffcc33; color:#8b0000; padding:15px;
+border:none; border-radius:50px; cursor:pointer;
+font-weight:bold; z-index:9999;">
+    🎵 Bật nhạc Tết
+</button>
+<div class="top-bar">🎁 Trao quà yêu thương - Đón xuân an khang 🎁</div>
+<header>
+    <!-- CHỮ TẾT CHẠY NGANG -->
+<div class="tet-chay">
+    <div class="tet-noidung">
+        🌸 XUÂN AN KHANG THỊNH VƯỢNG 🌸
+        🎊 CHÚC MỪNG NĂM MỚI 🎊
+        🧧 XUÂN AN KHANG THỊNH VƯỢNG 🧧
+        🎉 CHÚC MỪNG NĂM MỚI 🎉
+    </div>
+</div>
+    <div class="header-main">
+        <a href="index.html" class="logo">🌸 TẾT AN KHANG<span>CHÀO XUÂN ĐÓN LỘC</span></a>
+        <div class="search-box">
+            <input id="searchInput" placeholder="Tìm kiếm sản phẩm...">
+            <button onclick="searchProduct()">🔍</button>
+        </div>
+        <a href="giohang.html" class="cart-link">🛒 Giỏ hàng (<span class="cart-count">0</span>)</a>
+    </div>
+    <nav>
+        <a href="index.html">Trang chủ</a>
+        <a href="banhmut.html">Bánh mứt Tết</a>
+        <a href="gioqua.html" class="active">Giỏ quà Tết</a>
+        <a href="trangtri.html">Đồ trang trí</a>
+        <a href="thucpham.html">Thực phẩm Tết</a>
+        <a href="lienhe.html">Liên hệ</a>
+    </nav>
+</header>
+
+<section class="page-banner">
+    <h1>🎁 GIỎ QUÀ TẾT</h1>
+    <p>Món quà ý nghĩa - Gửi trao lời chúc đầu năm</p>
+</section>
+
+<section class="category-hero hero-gioqua">
+    <div class="category-hero-content">
+        <span class="hero-label">🎁 QUÀ TẶNG MÙA XUÂN 🎁</span>
+        <h1>GIỎ QUÀ TẾT - TRAO GỬI YÊU THƯƠNG</h1>
+        <p>Những giỏ quà sang trọng, ý nghĩa dành tặng người thân và đối tác.</p>
+
+        <div class="hero-benefits">
+            <span>🎁 Giảm đến 25%</span>
+            <span>🚚 Miễn phí giao hàng</span>
+            <span>💝 Gói quà miễn phí</span>
+        </div>
+
+        <a href="#sanpham" class="hero-button">CHỌN QUÀ NGAY →</a>
+    </div>
+    <div class="hero-decoration">🧧</div>
+</section>
+
+<section class="container">
+    <h2 class="section-title">QUÀ TẶNG NGÀY XUÂN</h2>
+    <p class="section-desc">Những giỏ quà đẹp mắt dành tặng gia đình, bạn bè và đối tác</p>
+
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="gq1.png">
+            <div class="product-info">
+                <h3>Giỏ quà Phúc Lộc</h3>
+                <p>Giỏ quà sang trọng với nhiều sản phẩm cao cấp.</p>
+                <div class="price">450.000đ</div>
+                <button class="add-cart" onclick="addToCart('Giỏ quà Phúc Lộc',450000,'')">Thêm vào giỏ</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="gq2.png">
+            <div class="product-info">
+                <h3>Hộp quà An Khang</h3>
+                <p>Hộp quà tinh tế, gửi lời chúc sức khỏe.</p>
+                <div class="price">350.000đ</div>
+                <button class="add-cart" onclick="addToCart('Hộp quà An Khang',350000,'')">Thêm vào giỏ</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="gq3.png">
+            <div class="product-info">
+                <h3>Giỏ quà Thịnh Vượng</h3>
+                <p>Thiết kế nổi bật, phù hợp biếu tặng đối tác.</p>
+                <div class="price">650.000đ</div>
+                <button class="add-cart" onclick="addToCart('Giỏ quà Thịnh Vượng',650000,'')">Thêm vào giỏ</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="gq4.png">
+            <div class="product-info">
+                <h3>Hộp quà Sum Vầy</h3>
+                <p>Món quà ấm áp dành cho người thân.</p>
+                <div class="price">280.000đ</div>
+                <button class="add-cart" onclick="addToCart('Hộp quà Sum Vầy',280000,'')">Thêm vào giỏ</button>
+            </div>
+        </div>
+      
+        <div class="product-card">
+            <img src="gq5.png">
+            <div class="product-info">
+                <h3>Giỏ quà Hạnh Phúc</h3>
+                <p>Giỏ quà mang thêm hạnh phúc gia đình.</p>
+                <div class="price">450.000đ</div>
+                <button class="add-cart" onclick="addToCart('Giỏ quà Hạnh Phúc',700.000,'')">Thêm vào giỏ</button>
+            </div>
+        </div>
+       
+        <div class="product-card">
+            <img src="gq6.png">
+            <div class="product-info">
+                <h3>Giỏ quà Trường Thọ</h3>
+                <p>Kính tặng mọi người sức khoẻ dồi dào.</p>
+                <div class="price">450.000đ</div>
+                <button class="add-cart" onclick="addToCart('Giỏ quà Trường Thọ',999.000,'')">Thêm vào giỏ</button>
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <img src="gq7.png">
+            <div class="product-info">
+                <h3>Giỏ quà Hân Hoan</h3>
+                <p>Luôn vui cười rạng rỡ yêu đời.</p>
+                <div class="price">480.000đ</div>
+                <button class="add-cart" onclick="addToCart('Giỏ quà Hân Hoan',480.000,'')">Thêm vào giỏ</button>
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <img src="gq8.png">
+            <div class="product-info">
+                <h3>Giỏ quà May Mắn</h3>
+                <p>Gặp nhiều điều vui may mắn trong cuộc sống.</p>
+                <div class="price">666.000đ</div>
+                <button class="add-cart" onclick="addToCart('Giỏ quà May Mắn',666.000,'')">Thêm vào giỏ</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <div><h3>TẾT AN KHANG</h3><p>Trao quà yêu thương ngày Tết.</p></div>
+        <div><h3>Danh mục</h3><p>Bánh mứt - Giỏ quà - Trang trí - Thực phẩm</p></div>
+        <div><h3>Liên hệ</h3><p>Nghệ An, Việt Nam</p><p>0987 654 321</p></div>
+    </div>
+    <div class="copyright">© 2026 Tết An Khang</div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
